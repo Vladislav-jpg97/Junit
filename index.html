@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Юнит</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+    :root {
+      --font-montserrat: "Montserrat", sans-serif;
+      --green-1: #00c470;
+      --green-2: #15d784;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col justify-between min-h-screen font-(family-name:--font-montserrat)">
+  <nav class="fixed top-[20px] left-0 right-0">
+    <div class="container px-[15px] mx-auto">
+      <div class="flex justify-between items-center">
+        <!-- button left -->
+        <button type="button"
+          class="bg-white inline-flex rounded-full px-[20px] py-[21.5px] justify-center items-center flex-col">
+          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black mb-[3px]"></span>
+          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black mb-[3px]"></span>
+          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black"></span>
+        </button>
+
+        <!-- button right -->
+        <button type="button"
+          class="bg-white inline-flex rounded-full px-[20px] py-[21.5px] justify-center items-center flex-col">
+          <img src="./img/icon/search.svg" alt="Поиск" />
+        </button>
+        <!--  -->
+      </div>
+    </div>
+  </nav>
+  <!-- section 1 -->
+  <header
+    class="min-h-[678px] bg-black/40 bg-[url('./img/header-bg.jpg')] bg-cover bg-center pt-[110px] pb-[40px] min-[600px]:pb-[50px] min-[600px]:min-h-[718px] min-[900px]:min-h-720px min-[1200px]:min-h-[870px]">
+    <div class="container mx-auto px-[15px] min-[320px]:w-[320px] min-[600px]:w-full min-[900px]:w-[800px] ">
+      <h1 class="text-[70px] font-bold text-center text-white mb-[30px] font-inherit min-[900px]:text-[96px]">
+        ЮНИТ
+      </h1>
+      <p
+        class="text-white text-[16px] font-bold text-center font-inherit mb-[30px] min-[600px]:mb-[50px] min-[900px]:text-[20px] min-[1200px]:mb-[70px]">
+        Управляй задачами и проектами из любой точки вместе с ЮНИТ. Дома. На
+        работе. В дороге. Онлайн. Оффлайн.
+      </p>
+      <!-- space-y-[] это есть > * + *  -->
+      <form
+        class="space-y-[20px] mb-[50px] min-[600px]:mb-[80px] min-[900px]:flex justify-between min-[900px]:items-center min-[900px]:mb-[129px] min-[1200px]:mb-[148px]">
+        <input type="text" placeholder="Ваше имя" name="username"
+          class="inline-block w-full py-[21px] px-[36px] bg-black/75 text-white font-inherit rounded-[50px] placeholder:text-white font-bold min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mr-[20px]" />
+        <input type="email" placeholder="Email" name="email"
+          class="inline-block w-full py-[21px] px-[36px] bg-black/75 text-white font-inherit rounded-[50px] placeholder:text-white font-bold min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mr-[20px]" />
+        <button type="submit"
+          class="inline-block w-full p-[21px] rounded-[50px] bg-[var(--green-1)] uppercase font-extrabold text-white tracking-[4px] text-[14px] min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mb-[20px]">
+          начать триал
+        </button>
+      </form>
+      <div class="text-center">
+        <a href="#functional" class="inline-block w-[32px]">
+          <img src="./img/icon/anchor.svg" alt="Якорь" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 2 -->
+  <section class="py-[40px] min-[600px]:py-[50px] min-[1200px]:py-[80px]" id="functional">
+    <div class="container mx-auto px-[15px]">
+      <p
+        class="text-[var(--green-2)] text-[14px] tracking-[4px] uppercase font-bold text-center mb-[10px] min-[600px]:mb-[20px] min-[900px]:mb-[30px] min-[900px]:text-[16px] min-[1200px]:mb-[40px]">
+        функционал
+      </p>
+
+      <h2
+        class="font-inherit font-bold text-[26px] text-center text-[#2E2E2E] mb-[40px] min-[600px]:text-[30px] min-[900px]:mb-[60px] min-[900px]:text-[38px] min-[1200px]:mb-[70px] min-[1200px]:text-[48px]">
+        Получайте больше
+      </h2>
+
+      <ul class="space-y-[40px] min-[600px]:grid min-[600px]:grid-cols-2 gap-[31px] min-[900px]:grid-cols-4">
+        <!-- BLOCK-1 -->
+        <li class="text-center">
+          <div class="w-[64px] mx-auto">
+            <img class="w-full h-full block mb-[20px]" src="./img/icon/file-check.svg" alt="file-check" />
+          </div>
+          <h3 class="leading-[1.5] font-bold text-[16px] text-[#2E2E2E] mb-[10px]">
+            Создан для управления
+          </h3>
+          <p class="leading-[1.6] text-[14px] text-[#808080] mb-[40px]">
+            Согласно ставшей уже классической работе Филипа Котлера, рекламная
+            площадка отталкивает рейтинг.
+          </p>
+        </li>
+        <!-- BLOCK-2 -->
+        <li class="text-center">
+          <div class="w-[64px] mx-auto">
+            <img class="w-full h-full block mb-[20px]" src="./img/icon/microphone.svg" alt="microphone" />
+          </div>
+          <h3 class="leading-[1.5] font-bold text-[16px] text-[#2E2E2E] mb-[10px]">
+            Голосовое управление
+          </h3>
+          <p class="leading-[1.6] text-[14px] text-[#808080] mb-[40px]">
+            Согласно ставшей уже классической работе Филипа Котлера, рекламная
+            площадка отталкивает рейтинг.
+          </p>
+        </li>
+        <!-- BLOCK-3 -->
+        <li class="text-center">
+          <div class="w-[64px] mx-auto">
+            <img class="w-full h-full block mb-[20px]" src="./img/icon/money-stack.svg" alt="file-check" />
+          </div>
+          <h3 class="leading-[1.5] font-bold text-[16px] text-[#2E2E2E] mb-[10px]">
+            Контроль бюджета
+          </h3>
+          <p class="leading-[1.6] text-[14px] text-[#808080] mb-[40px]">
+            Согласно ставшей уже классической работе Филипа Котлера, рекламная
+            площадка отталкивает рейтинг.
+          </p>
+        </li>
+        <!-- BLOCK-4 -->
+        <li class="text-center">
+          <div class="w-[64px] mx-auto">
+            <img class="w-full h-full block mb-[20px]" src="./img/icon/chart-pie.svg" alt="file-check" />
+          </div>
+          <h3 class="leading-[1.5] font-bold text-[16px] text-[#2E2E2E] mb-[10px]">
+            Статистика и графики
+          </h3>
+          <p class="leading-[1.6] text-[14px] text-[#808080] mb-[40px]">
+            Согласно ставшей уже классической работе Филипа Котлера, рекламная
+            площадка отталкивает рейтинг.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section
+    class="bg-black/40 bg-[url('./img/Rectangle-3.jpg')] bg-cover bg-center py-[40px] min-[600px]:mb-[50px] min-[1200px]:mb-[80px]">
+
+    <div class="container mx-auto px-[15px]">
+
+      <h2
+        class="leading-[1.3] text-[18px] text-white text-center mb-[20px] min-[600px]:text-[20px] min-[900px]:text-[22px]">
+        Начните использовать
+        <strong>ЮНИТ</strong> уже сегодня.
+      </h2>
+
+      <div class="text-center">
+        <a href="#tariffs"
+          class="inline-block py-[21px] px-[40px] rounded-[30px] bg-[var(--green-1)] uppercase font-extrabold text-white tracking-[4px] text-[14px]">
+          подключить
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- section 4 -->
+
+  <section class="py-[40px]">
+    <!-- Reverse right -->
+    <div class="border-b border-b-[#E1E1E1] pb-[37px]">
+
+      <div class="container mx-auto px-[15px] ">
+
+        <div
+          class="space-y-[10px] min-[600px]:flex min-[600px]:justify-center min-[600px]:items-center min-[900px]:flex-row-reverse ">
+          <div class="w-[320px] mx-auto min-[900px]:mx-[0px] ">
+            <img src="./img/iPhone-X.jpg" alt="Задачи и подзадачи" class="w-full h-full block object-cover">
+          </div>
+
+          <div class="min-[600px]:w-[270px] min-[900px]:w-[495px] min-[900px]:mr-[70px] min-[1200px]:w-auto">
+            <p
+              class="text-center text-[var(--green-2)] mb-[10px] font-bold text-[14px] uppercase min-[600px]:mb-[20px] min-[600px]:text-left min-[900px]:text-[16px]">
+              гибкое управление</p>
+
+            <h2
+              class="text-center text-[#2E2E2E] text-[26px] font-bold mb-[20px] min-[600px]:text-[30px] min-[600px]:text-left min-[900px]:text-[38px] min-[1200px]:mb-[30px] min-[1200px]:text-[48px]">
+              Задачи и подзадачи
+            </h2>
+
+            <p
+              class="text-[#808080] text-center font-medium text-[14px] leading-[160%] min-[600px]:text-left min-[900px]:w-[420px]">
+              Тактика выстраивания отношений с коммерчекими агентами, вопреки мнению П.Друкера, искажает продвигаемый
+              отраслевой стандарт. Стратегический рыночный план традиционно масштабирует комплексный имидж. Спонсорство
+              развивает формат события.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Reverse left -->
+
+    <div class="pt-[43px] min-[600px]:pt-[50px] min-[600px]:pb-[44px] ">
+
+      <div class="container mx-auto px-[15px]">
+
+        <div class="space-y-[10px] min-[600px]:relative min-[900px]:flex min-[900px]:justify-end min-[1200px]:justify-between">
+          <div
+            class=" w-[270px] mx-auto min-[600px]:absolute min-[600px]:top-0 min-[600px]:right-[-260px] min-[600px]:w-[451px] min-[900px]:left-[-750px] min-[900px]:w-[410px] min-[900px]:top-[-8px] min-[1200px]:static min-[1200px]:w-[505px] min-[1200px]:mr-[110px]">
+            <img src="./img/iPad-Pro.jpg" alt="Задачи и подзадачи"
+              class="w-full h-full block object-cover overflow-hidden">
+          </div>
+
+          <div class="min-[600px]:w-[370px] min-[900px]:pl-[30px] min-[900px]:w-[470px] min-[900px]:pl-[85px] min-[1200px]:pl-[0px] min-[1200px]:w-[380px]">
+            <p
+              class="text-center text-[var(--green-2)] mb-[10px] font-bold text-[14px] uppercase min-[600px]:text-left">
+              всегда в фокусе</p>
+
+            <h2
+              class="text-center text-[#2E2E2E] text-[26px] font-bold mb-[20px] min-[600px]:text-[30px] min-[600px]:text-left min-[900px]:text-[38px] min-[1200px]:text-[48px]">
+              Множественные приоритеты
+            </h2>
+
+            <p
+              class="text-[#808080] text-center font-medium text-[14px] leading-[170%] min-[600px]:text-left min-[900px]:leading-[200%] min-[900px]:text-[13px]">
+              Потребление существенно продуцирует рыночный традиционный канал. В соответствии с законом Ципфа, маркетинг
+              основан на тщательном анализе данных. Наряду с этим, целевой трафик конкурентоспособен.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION-5 -->
+  <section class="bg-[url('./img/section-5-bg.jpg')] bg-cover bg-center py-[40px] min-[600px]:py-[50px] min-[600px]:mt-[20px] min-[900px]:mt-[24px] " id="tariffs">
+    <div class="container mx-auto px-[15px]">
+      <p class="font-bold text-[14px] text-white text-center uppercase tracking-[4px] mb-[10px]">
+        цены
+      </p>
+      <h2
+        class="font-bold text-[26px] text-center text-white mb-[40px] min-[600px]:text-[30px] min-[900px]:mb-[50px] min-[600px]:text-[38px]">
+        Выберите подходящий план
+      </h2>
+
+      <ul class="space-y-[30px] min-[900px]:grid min-[900px]:grid-cols-3 min-[900px]:gap-[30px] ">
+        <li>
+          <div class="rounded-[8px] bg-black/75">
+            <div class="py-[40px] text-center border-b border-b-white/10">
+
+              <p class="uppercase text-[16px] text-[#b2b2b2] tracking-[4px] font-bold mb-[20px]">
+                базовый
+              </p>
+
+              <p class="text-white font-bold text-[80px] leading-[100%] mb-[15px]">15</p>
+
+              <div class="text-center">
+                <span
+                  class="bg-white/10 py-[6px] px-[15px] rounded-[30px] text-[12px] font-bold text-white uppercase tracking-[4px]">$/мес.</span>
+              </div>
+            </div>
+
+            <!-- Content -->
+
+            <div class="py-[40px] text-center">
+              <ul class="space-y-[25px] text-white font-medium text-[16px] mb-[58px]">
+                <li>10 проектов</li>
+
+                <li> 5 участников </li>
+
+                <li>∞ количество задач</li>
+
+                <li>5 GB медиа хранилище </li>
+
+                <li>Поддержка по Email</li>
+              </ul>
+
+              <button type="button"
+                class="py-[21px] px-[40px] text-white uppercase border rounded-[30px] border-white/20 tracking-[4px] font-extrabold">
+                выбрать
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="rounded-[8px] bg-[#304FFE]/95">
+            <div class="py-[40px] text-center border-b border-b-white/10">
+
+              <p class="uppercase text-[16px] text-white tracking-[4px] font-bold mb-[20px]">
+                стандарт
+              </p>
+
+              <p class="text-white font-bold text-[80px] leading-[100%] mb-[15px]">65</p>
+
+              <div class="text-center">
+                <span
+                  class="bg-white/10 py-[6px] px-[15px] rounded-[30px] text-[12px] font-bold text-white uppercase tracking-[4px]">$/мес.</span>
+              </div>
+            </div>
+
+            <!-- Content -->
+
+            <div class="py-[40px] text-center">
+              <ul class="space-y-[25px] text-white font-medium text-[16px] mb-[58px]">
+                <li>10 проектов</li>
+
+                <li> 5 участников </li>
+
+                <li>∞ количество задач</li>
+
+                <li>5 GB медиа хранилище </li>
+
+                <li>Поддержка по Email</li>
+              </ul>
+
+              <button type="button"
+                class="bg-white py-[21px] px-[40px] uppercase border rounded-[30px] border-white/20 tracking-[4px] font-extrabold">
+                выбрать
+              </button>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <div class="rounded-[8px] bg-black/75">
+            <div class="py-[40px] text-center border-b border-b-white/10">
+
+              <p class="uppercase text-[16px] text-[#b2b2b2] tracking-[4px] font-bold mb-[20px]">
+                премиум
+              </p>
+
+              <p class="text-white font-bold text-[80px] leading-[100%] mb-[15px]">
+                125
+              </p>
+
+              <div class="text-center">
+                <span
+                  class="bg-white/10 py-[6px] px-[15px] rounded-[30px] text-[12px] font-bold text-white uppercase tracking-[4px]">$/мес.</span>
+              </div>
+            </div>
+
+            <!-- Content -->
+
+            <div class="py-[40px] text-center">
+              <ul class="space-y-[25px] text-white font-medium text-[16px] mb-[58px]">
+                <li>100 проектов</li>
+                <li>30 участников</li>
+                <li>∞ количество задач</li>
+                <li>50 GB медиа хранилище </li>
+                <li>Поддержка по Email</li>
+              </ul>
+
+              <button type="button"
+                class="py-[21px] px-[40px] text-white uppercase border rounded-[30px] border-white/20 tracking-[4px] font-extrabold">
+                выбрать
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- SECTION 6 -->
+  <section class="py-[40px] min-[600px]:py-[50px] min-[1200px]:py-[80px]">
+    <div class="container mx-auto px-[15px]">
+      <p
+        class="text-[var(--green-2)] text-[14px] tracking-[4px] uppercase font-bold text-center mb-[10px] min-[600px]:mb-[20px] min-[900px]:text-[16px] min-[900px]:mb-[30px] min-[1200px]:mb-[40px]">
+        наши клиенты
+      </p>
+
+      <h2
+        class="font-bold text-[26px] text-center text-[#2E2E2E] leading-none mb-[30px] min-[600px]:mb-[40px] min-[600px]:text-[30px] min-[900px]:text-[38px] min-[900px]:mb-[50px] min-[1200px]:text-[48px] min-[1200px]:mb-[60px]">
+        Что говорят пользователи
+      </h2>
+
+      <div class="relative" id="slider">
+
+        <div class="text-center mb-[30px] min-[900px]:mb-[40px]">
+          <blockquote
+            class="leading-[150%] text-[14px] font-medium mb-[20px] min-[600px]:text-[16px] min-[600px]:w-[370px] min-[600px]:mx-auto min-[900px]:text-[18px] min-[900px]:mb-[30px] min-[900px]:w-auto min-[1200px]:mb-[40px] min-[1200px]:w-[770px]">
+            Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше
+            срока.
+          </blockquote>
+          <div class="hidden min-[600px]:inline">
+            <span
+              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#F5F5F5] rounded-full bottom-28">
+              <img src="./img/icon/arrow-left.svg" alt="стрелкаВлево">
+            </span>
+
+            <span
+              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#00c470] rounded-full right-0 bottom-28">
+              <img src="./img/icon/arrow-right.svg" alt="стрелкаВправо">
+            </span>
+          </div>
+
+          <div class="flex justify-center items-center gap-[10px]">
+            <div
+              class="w-[60px] h-[60px] bg-gray-300 rounded-full overflow-hidden min-[600px]:w-[80px] min-[600px]:h-[80px]">
+              <img src="./img/freelan.jpg" alt="Николай Остапов" class="w-full h-full object-cover">
+            </div>
+
+            <div class="text-left">
+              <p class="font-medium text-[14px] text-[var(--green-1)] min-[600px]:text-[16px]">
+                Фрилансер
+              </p>
+
+              <p class="font-medium text-[14px] text-[#808080] min-[600px]:text-[16px] ">Николай Остапов</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center gap-[10px]">
+          <span data-active
+            class="w-[14px] h-[14px] bg-[#E1E1E1] rounded-full cursor-pointer data-active:bg-[var(--green-2)]"></span>
+
+          <span
+            class="w-[14px] h-[14px] bg-[#E1E1E1] rounded-full cursor-pointer data-active:bg-[var(--green-2)]"></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-[#1A1A1A] py-[40px] min-[600px]:py-[60px] min-[1200px]:py-[70px]">
+    <div class="container mx-auto px-[15px]">
+
+      <div class="space-y-[40px] min-[600px]:space-y-[30px]">
+        <!-- Navigation -->
+        <div
+          class=" space-y-[40px] min-[600px]:space-y-[30px] min-[900px]:flex min-[900px]:items-center min-[900px]:justify-center">
+          <ul
+            class="space-y-[20px] text-center min-[600px]:flex min-[600px]:space-x-[50px] min-[600px]:justify-center min-[900px]:mb-[0px] min-[900px]:mt-[20px] min-[900px]:mr-[50px]">
+            <li>
+              <a href="#!" class="text-white font-bold hover:text-[var(--green-2)] font-bold tracking-[4px] uppercase">
+                о нас
+              </a>
+            </li>
+
+            <li>
+              <a href="#!"
+                class="text-white font-bold hover:text-[var(--green-2)] font-bold tracking-[4px] uppercase">блог</a>
+            </li>
+
+            <li>
+              <a href="#!"
+                class="text-white font-bold hover:text-[var(--green-2)] font-bold tracking-[4px] uppercase">контакты</a>
+            </li>
+          </ul>
+
+          <!-- Social -->
+          <div class="text-center space-x-[20px]">
+
+            <a href="#!" target="_blank"
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+
+              <img src="./img/icon/twitter.svg" alt="twitter">
+            </a>
+
+            <a href="#!" target="_blank"
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+
+              <img src="./img/icon/facebook.svg" alt="facebook">
+            </a>
+
+            <a href="#!" target="_blank"
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+
+              <img src="./img/icon/instagram.svg" alt="instagram">
+            </a>
+
+            <a href="#!" target="_blank"
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+
+              <img src="./img/icon/vk.svg" alt="vk">
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <p class="text-white/30 text-[14px] leading-[150%] text-center min-[600px]:hidden">
+          Копирайт &copy; 2025 <strong>ЮНИТ</strong>. <br> Все права защищены.
+        </p>
+        <p class="text-white/30 text-[14px] leading-[150%] text-center min-[600px]:block hidden">
+          Копирайт &copy; 2025 <strong>ЮНИТ</strong>. Все права защищены.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- LIBS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss-browser/4.1.13/index.global.min.js"
+    integrity="sha512-TscjjxDy2iXx5s55Ar78c01JDHUug0K5aw4YKId9Yuocjx3ueX/X9PFyH5XNRVWqagx3TtcQWQVBaHAIPFjiFA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
