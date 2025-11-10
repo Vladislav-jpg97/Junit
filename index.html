@@ -18,7 +18,7 @@
 </head>
 
 <body class="flex flex-col justify-between min-h-screen font-(family-name:--font-montserrat)">
-  <nav class="fixed top-[20px] left-0 right-0">
+  <nav class="fixed top-[20px] left-0 right-0 min-[600px]:z-10">
     <div class="container px-[15px] mx-auto">
       <div class="flex justify-between items-center">
         <!-- button left -->
@@ -172,12 +172,19 @@
       <div class="container mx-auto px-[15px] ">
 
         <div
-          class="space-y-[10px] min-[600px]:flex min-[600px]:justify-center min-[600px]:items-center min-[900px]:flex-row-reverse ">
-          <div class="w-[320px] mx-auto min-[900px]:mx-[0px] ">
+          class="space-y-[10px] 
+          min-[600px]:flex min-[600px]:justify-between min-[600px]:items-center 
+          min-[900px]:flex-row-reverse min-[900px]:justify-between
+          min-[1200px]:justify-center">
+          <div class="w-[320px] mx-auto 
+          min-[900px]:mx-[0px] ">
             <img src="./img/iPhone-X.jpg" alt="Задачи и подзадачи" class="w-full h-full block object-cover">
           </div>
 
-          <div class="min-[600px]:w-[270px] min-[900px]:w-[495px] min-[900px]:mr-[70px] min-[1200px]:w-auto">
+          <div class="min-[600px]:max-w-[270px] 
+                      min-[900px]:mr-[70px]
+                      min-[900px]:max-w-[420px]
+                      min-[1200px]:max-w-[530px]">
             <p
               class="text-center text-[var(--green-2)] mb-[10px] font-bold text-[14px] uppercase min-[600px]:mb-[20px] min-[600px]:text-left min-[900px]:text-[16px]">
               гибкое управление</p>
@@ -188,7 +195,9 @@
             </h2>
 
             <p
-              class="text-[#808080] text-center font-medium text-[14px] leading-[160%] min-[600px]:text-left min-[900px]:w-[420px]">
+              class="text-[#808080] text-center font-medium text-[14px] leading-[160%] 
+              min-[600px]:text-left
+              min-[1200px]:max-w-[400px]">
               Тактика выстраивания отношений с коммерчекими агентами, вопреки мнению П.Друкера, искажает продвигаемый
               отраслевой стандарт. Стратегический рыночный план традиционно масштабирует комплексный имидж. Спонсорство
               развивает формат события.
@@ -201,29 +210,48 @@
     </div>
     <!-- Reverse left -->
 
-    <div class="pt-[43px] min-[600px]:pt-[50px] min-[600px]:pb-[44px] ">
+    <div class="py-[43px] min-[600px]:pb-[90px] 
+    min-[600px]:relative min-[600px]:overflow-hidden
+    min-[900px]:py-[50px]">
 
       <div class="container mx-auto px-[15px]">
 
-        <div class="space-y-[10px] min-[600px]:relative min-[900px]:flex min-[900px]:justify-end min-[1200px]:justify-between">
+        <div class="space-y-[10px] 
+        min-[600px]:flex min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between min-[600px]:gap-5
+        min-[900px]:justify-center">
           <div
-            class=" w-[270px] mx-auto min-[600px]:absolute min-[600px]:top-0 min-[600px]:right-[-260px] min-[600px]:w-[451px] min-[900px]:left-[-750px] min-[900px]:w-[410px] min-[900px]:top-[-8px] min-[1200px]:static min-[1200px]:w-[505px] min-[1200px]:mr-[110px]">
+            class="
+            min-[600px]:absolute min-[600px]:top-[38px] min-[600px]:right-[-230px] min-[600px]:w-[430px]
+            min-[900px]:static min-[900px]:mt-[50px]
+            min-[1200px]:mr-[100px]">
             <img src="./img/iPad-Pro.jpg" alt="Задачи и подзадачи"
-              class="w-full h-full block object-cover overflow-hidden">
+              class="w-full h-full block object-cover">
           </div>
 
-          <div class="min-[600px]:w-[370px] min-[900px]:pl-[30px] min-[900px]:w-[470px] min-[900px]:pl-[85px] min-[1200px]:pl-[0px] min-[1200px]:w-[380px]">
+          <div class="min-[600px]:max-w-[65%] 
+          min-[900px]:max-w-[415px] min-[900px]:ml-[30px]
+          min-[1200px]:max-w-[400px]
+          ">
             <p
-              class="text-center text-[var(--green-2)] mb-[10px] font-bold text-[14px] uppercase min-[600px]:text-left">
+              class="text-center text-[var(--green-2)] mb-[10px] font-bold text-[14px] uppercase 
+              min-[600px]:text-left              
+              min-[900px]:text-[16px]">
               всегда в фокусе</p>
 
             <h2
-              class="text-center text-[#2E2E2E] text-[26px] font-bold mb-[20px] min-[600px]:text-[30px] min-[600px]:text-left min-[900px]:text-[38px] min-[1200px]:text-[48px]">
+              class="text-center text-[#2E2E2E] text-[26px] font-bold mb-[20px] leading-[1]
+              min-[600px]:text-[30px] min-[600px]:text-left min-[600px]:my-[20px]
+              min-[900px]:text-[38px]
+              min-[1200px]:my-[30px]
+              ">
               Множественные приоритеты
             </h2>
 
             <p
-              class="text-[#808080] text-center font-medium text-[14px] leading-[170%] min-[600px]:text-left min-[900px]:leading-[200%] min-[900px]:text-[13px]">
+              class="text-[#808080] text-center font-medium text-[14px] leading-[170%] 
+              min-[600px]:text-left
+              min-[1200px]:max-w-[400px]
+              ">
               Потребление существенно продуцирует рыночный традиционный канал. В соответствии с законом Ципфа, маркетинг
               основан на тщательном анализе данных. Наряду с этим, целевой трафик конкурентоспособен.
             </p>
