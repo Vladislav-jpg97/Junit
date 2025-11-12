@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -31,7 +31,7 @@
 
         <!-- button right -->
         <button type="button"
-          class="bg-white inline-flex rounded-full px-[20px] py-[21.5px] justify-center items-center flex-col">
+          class="bg-white inline-flex rounded-full px-[20px] py-[20px] justify-center items-center flex-col">
           <img src="./img/icon/search.svg" alt="Поиск" />
         </button>
         <!--  -->
@@ -40,8 +40,15 @@
   </nav>
   <!-- section 1 -->
   <header
-    class="min-h-[678px] bg-black/40 bg-[url('./img/header-bg.jpg')] bg-cover bg-center pt-[110px] pb-[40px] min-[600px]:pb-[50px] min-[600px]:min-h-[718px] min-[900px]:min-h-720px min-[1200px]:min-h-[870px]">
-    <div class="container mx-auto px-[15px] min-[320px]:w-[320px] min-[600px]:w-full min-[900px]:w-[800px] ">
+    class="min-h-[678px] bg-black/40 bg-[url('./img/header-bg.jpg')] bg-cover bg-center pt-[110px] pb-[40px] bg-no-repeat 
+    min-[600px]:pb-[50px] min-[600px]:min-h-[718px] 
+    min-[900px]:min-h-[720px]
+    min-[1200px]:min-h-[910px]">
+    <div class="container mx-auto px-[15px] 
+    min-[320px]:w-[320px]
+    min-[600px]:w-full 
+    min-[900px]:w-[800px] min-[900px]:mt-[65px] 
+    min-[1200px]:mt-[120px]">
       <h1 class="text-[70px] font-bold text-center text-white mb-[30px] font-inherit min-[900px]:text-[96px]">
         ЮНИТ
       </h1>
@@ -54,9 +61,9 @@
       <form
         class="space-y-[20px] mb-[50px] min-[600px]:mb-[80px] min-[900px]:flex justify-between min-[900px]:items-center min-[900px]:mb-[129px] min-[1200px]:mb-[148px]">
         <input type="text" placeholder="Ваше имя" name="username"
-          class="inline-block w-full py-[21px] px-[36px] bg-black/75 text-white font-inherit rounded-[50px] placeholder:text-white font-bold min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mr-[20px]" />
+          class="focus:outline-none active:outline-none inline-block w-full py-[21px] px-[36px] bg-black/75 text-white font-inherit rounded-[50px] placeholder:text-white font-bold min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mr-[20px]" />
         <input type="email" placeholder="Email" name="email"
-          class="inline-block w-full py-[21px] px-[36px] bg-black/75 text-white font-inherit rounded-[50px] placeholder:text-white font-bold min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mr-[20px]" />
+          class="focus:outline-none active:outline-none inline-block w-full py-[21px] px-[36px] bg-black/75 text-white font-inherit rounded-[50px] placeholder:text-white font-bold min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mr-[20px]" />
         <button type="submit"
           class="inline-block w-full p-[21px] rounded-[50px] bg-[var(--green-1)] uppercase font-extrabold text-white tracking-[4px] text-[14px] min-[600px]:w-[370px] min-[600px]:block min-[600px]:ml-auto min-[600px]:mr-auto min-[900px]:w-[240px] min-[900px]:mb-[20px]">
           начать триал
@@ -417,12 +424,12 @@
           </blockquote>
           <div class="hidden min-[600px]:inline">
             <span
-              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#F5F5F5] rounded-full bottom-28">
+              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#F5F5F5] hover:bg-[var(--green-2)] rounded-full bottom-28">
               <img src="./img/icon/arrow-left.svg" alt="стрелкаВлево">
             </span>
 
             <span
-              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#00c470] rounded-full right-0 bottom-28">
+              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#F5F5F5] hover:bg-[var(--green-2)] rounded-full right-0 bottom-28">
               <img src="./img/icon/arrow-right.svg" alt="стрелкаВправо">
             </span>
           </div>
@@ -485,25 +492,25 @@
           <div class="text-center space-x-[20px]">
 
             <a href="#!" target="_blank"
-              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)]">
 
               <img src="./img/icon/twitter.svg" alt="twitter">
             </a>
 
             <a href="#!" target="_blank"
-              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)]">
 
               <img src="./img/icon/facebook.svg" alt="facebook">
             </a>
 
             <a href="#!" target="_blank"
-              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)]">
 
               <img src="./img/icon/instagram.svg" alt="instagram">
             </a>
 
             <a href="#!" target="_blank"
-              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)">
+              class="inline-flex justify-center items-center w-[48px] h-[48px] rounded-full bg-[#c4c4c4]/10 hover:bg-[var(--green-1)]">
 
               <img src="./img/icon/vk.svg" alt="vk">
             </a>
