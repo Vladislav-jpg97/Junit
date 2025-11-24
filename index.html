@@ -15,35 +15,106 @@
       --green-2: #15d784;
     }
   </style>
+  <link rel="stylesheet" href="./libs/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./libs/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="./css/global.css">
 </head>
 
 <body class="flex flex-col justify-between min-h-screen font-(family-name:--font-montserrat)">
-  <nav class="fixed top-[20px] left-0 right-0 min-[600px]:z-10">
+  <nav class="fixed top-0 left-0 right-0 min-[600px]:z-10 py-[20px]" id="js-nav">
     <div class="container px-[15px] mx-auto">
-      <div class="flex justify-between items-center">
+      <div id="deletButton" class="flex justify-between items-center">
         <!-- button left -->
-        <button type="button"
-          class="bg-white inline-flex rounded-full px-[20px] py-[21.5px] justify-center items-center flex-col">
-          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black mb-[3px]"></span>
-          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black mb-[3px]"></span>
-          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black"></span>
+
+        <button id="js-burger" type="button"
+          class="group bg-white inline-flex rounded-full px-[20px] py-[21.5px] justify-center items-center flex-col hover:bg-[var(--green-1)]">
+          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black mb-[3px] group-hover:bg-white"></span>
+          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black mb-[3px] group-hover:bg-white"></span>
+          <span class="inline-block w-[20px] rounded-[20px] h-[3px] bg-black group-hover:bg-white"></span>
         </button>
 
+
+
         <!-- button right -->
-        <button type="button"
-          class="bg-white inline-flex rounded-full px-[20px] py-[20px] justify-center items-center flex-col">
-          <img src="./img/icon/search.svg" alt="Поиск" />
-        </button>
+        <div class="relative flex ">
+          <input id="inputSearch" class="search-input" type="search" placeholder="Поиск" name="search">
+          <button id="button-input" type="button"
+            class="z-10 bg-white inline-flex rounded-full px-[20px] py-[20px] justify-center items-center flex-col hover:bg-[var(--green-1)]">
+            <img src="./img/icon/search.svg" alt="Поиск" />
+
+          </button>
+        </div>
+
         <!--  -->
       </div>
     </div>
+
+
+    <!-- button close -->
+
+    <div class="overlay" id="js-overlay">
+      <div class="container px-[15px] mx-auto">
+        <div class="flex justify-between items-center mt-[25px]">
+          <button id="js-overlay-close" type="button"
+            class="bg-white inline-flex rounded-full px-[17px] py-[17px] justify-center items-center flex-col hover:bg-[var(--green-1)] group">
+            <div class="relative w-6 h-6">
+              <span
+                class="absolute left-1/2 top-1/2 block w-6 h-[3px] bg-black rotate-45 -translate-x-1/2 -translate-y-1/2 group-hover:bg-white"></span>
+              <span
+                class="absolute left-1/2 top-1/2 block w-6 h-[3px] bg-black -rotate-45 -translate-x-1/2 -translate-y-1/2 group-hover:bg-white"></span>
+            </div>
+          </button>
+
+          <div class="relative flex ">
+            <input id="inputSearch-2" class="search-input relative " type="search" placeholder="Поиск"
+              name="search">
+            <button id="button-input-2" type="button"
+              class="z-1 bg-white inline-flex rounded-full px-[20px] py-[20px] justify-center items-center flex-col hover:bg-[var(--green-1)]">
+              <img src="./img/icon/search.svg" alt="Поиск" />
+
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-[50px]">
+
+        <h4 class="text-[var(--green-2)] text-[18px] tracking-[4px] uppercase font-bold text-center mb-[50px]">
+          Навигация по сайту
+        </h4>
+
+        <div class="space-y-[40px] text-center flex flex-col">
+          <a class="text-[24px] font-bold leading-100% text-[#fff] hover:text-[var(--green-1)]" href="#">
+            Функционал
+          </a>
+
+          <a class="text-[24px] font-bold leading-100% text-[#fff] hover:text-[var(--green-1)]" href="#">
+            Гибкое управление
+          </a>
+
+          <a class="text-[24px] font-bold leading-100% text-[#fff] hover:text-[var(--green-1)]" href="#">
+            Всегда в фокусе
+          </a>
+
+          <a class="text-[24px] font-bold leading-100% text-[#fff] hover:text-[var(--green-1)]" href="#">
+            Цены
+          </a>
+
+          <a class="text-[24px] font-bold leading-100% text-[#fff] hover:text-[var(--green-1)]" href="#">
+            Отзывы клиентов
+          </a>
+
+        </div>
+      </div>
+    </div>
+
   </nav>
   <!-- section 1 -->
-  <header
-    class="min-h-[678px] bg-black/40 bg-[url('./img/header-bg.jpg')] bg-cover bg-center pt-[110px] pb-[40px] bg-no-repeat 
+  <header class="min-h-[678px] bg-black/40 bg-[url('./img/header-bg.jpg')] bg-cover bg-center pt-[110px] pb-[40px] bg-no-repeat 
     min-[600px]:pb-[50px] min-[600px]:min-h-[718px] 
     min-[900px]:min-h-[720px]
-    min-[1200px]:min-h-[910px]">
+    min-[1200px]:min-h-[947px]">
     <div class="container mx-auto px-[15px] 
     min-[320px]:w-[320px]
     min-[600px]:w-full 
@@ -178,8 +249,7 @@
 
       <div class="container mx-auto px-[15px] ">
 
-        <div
-          class="space-y-[10px] 
+        <div class="space-y-[10px] 
           min-[600px]:flex min-[600px]:justify-between min-[600px]:items-center 
           min-[900px]:flex-row-reverse min-[900px]:justify-between
           min-[1200px]:justify-center">
@@ -201,8 +271,7 @@
               Задачи и подзадачи
             </h2>
 
-            <p
-              class="text-[#808080] text-center font-medium text-[14px] leading-[160%] 
+            <p class="text-[#808080] text-center font-medium text-[14px] leading-[160%] 
               min-[600px]:text-left
               min-[1200px]:max-w-[400px]">
               Тактика выстраивания отношений с коммерчекими агентами, вопреки мнению П.Друкера, искажает продвигаемый
@@ -226,27 +295,23 @@
         <div class="space-y-[10px] 
         min-[600px]:flex min-[600px]:flex-row min-[600px]:items-center min-[600px]:justify-between min-[600px]:gap-5
         min-[900px]:justify-center">
-          <div
-            class="
+          <div class="
             min-[600px]:absolute min-[600px]:top-[38px] min-[600px]:right-[-230px] min-[600px]:w-[430px]
             min-[900px]:static min-[900px]:mt-[50px]
             min-[1200px]:mr-[100px]">
-            <img src="./img/iPad-Pro.jpg" alt="Задачи и подзадачи"
-              class="w-full h-full block object-cover">
+            <img src="./img/iPad-Pro.jpg" alt="Задачи и подзадачи" class="w-full h-full block object-cover">
           </div>
 
           <div class="min-[600px]:max-w-[65%] 
           min-[900px]:max-w-[415px] min-[900px]:ml-[30px]
           min-[1200px]:max-w-[400px]
           ">
-            <p
-              class="text-center text-[var(--green-2)] mb-[10px] font-bold text-[14px] uppercase 
+            <p class="text-center text-[var(--green-2)] mb-[10px] font-bold text-[14px] uppercase 
               min-[600px]:text-left              
               min-[900px]:text-[16px]">
               всегда в фокусе</p>
 
-            <h2
-              class="text-center text-[#2E2E2E] text-[26px] font-bold mb-[20px] leading-[1]
+            <h2 class="text-center text-[#2E2E2E] text-[26px] font-bold mb-[20px] leading-[1]
               min-[600px]:text-[30px] min-[600px]:text-left min-[600px]:my-[20px]
               min-[900px]:text-[38px]
               min-[1200px]:my-[30px]
@@ -254,8 +319,7 @@
               Множественные приоритеты
             </h2>
 
-            <p
-              class="text-[#808080] text-center font-medium text-[14px] leading-[170%] 
+            <p class="text-[#808080] text-center font-medium text-[14px] leading-[170%] 
               min-[600px]:text-left
               min-[1200px]:max-w-[400px]
               ">
@@ -271,7 +335,9 @@
   </section>
 
   <!-- SECTION-5 -->
-  <section class="bg-[url('./img/section-5-bg.jpg')] bg-cover bg-center py-[40px] min-[600px]:py-[50px] min-[600px]:mt-[20px] min-[900px]:mt-[24px] " id="tariffs">
+  <section
+    class="bg-[url('./img/section-5-bg.jpg')] bg-cover bg-center py-[40px] min-[600px]:py-[50px] min-[600px]:mt-[20px] min-[900px]:mt-[24px] "
+    id="tariffs">
     <div class="container mx-auto px-[15px]">
       <p class="font-bold text-[14px] text-white text-center uppercase tracking-[4px] mb-[10px]">
         цены
@@ -413,51 +479,81 @@
         class="font-bold text-[26px] text-center text-[#2E2E2E] leading-none mb-[30px] min-[600px]:mb-[40px] min-[600px]:text-[30px] min-[900px]:text-[38px] min-[900px]:mb-[50px] min-[1200px]:text-[48px] min-[1200px]:mb-[60px]">
         Что говорят пользователи
       </h2>
+      <div class="relative">
 
-      <div class="relative" id="slider">
+        <div
+          class=" owl-carousel owl-theme max-w-[970px] w-full mx-auto min-[900px]:max-w-[795px] min-[600px]:max-w-[570px] min-[320px]:max-w-[290px]"
+          id="slider">
 
-        <div class="text-center mb-[30px] min-[900px]:mb-[40px]">
-          <blockquote
-            class="leading-[150%] text-[14px] font-medium mb-[20px] min-[600px]:text-[16px] min-[600px]:w-[370px] min-[600px]:mx-auto min-[900px]:text-[18px] min-[900px]:mb-[30px] min-[900px]:w-auto min-[1200px]:mb-[40px] min-[1200px]:w-[770px]">
-            Это потрясающее приложение которое помогло мне завершить все мои дела, и сделать дипломный проект раньше
-            срока.
-          </blockquote>
-          <div class="hidden min-[600px]:inline">
-            <span
-              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#F5F5F5] hover:bg-[var(--green-2)] rounded-full bottom-28">
-              <img src="./img/icon/arrow-left.svg" alt="стрелкаВлево">
-            </span>
+          <div>
+            <p class="font-medium text-[18px] leading-[200%] tracking-normal text-center pb-[30px]
+                        min-[600px]:text-[16px]
+                        min-[320px]:text-[14px]"> Это потрясающее приложение
+              которое помогло мне завершить все мои дела, и сделать дипломный проект раньше
+              срока. </p>
+            <div class="flex items-center justify-center">
+              <div class="w-[80px] h-[80px] mr-[20px]">
+                <img class="w-full h-full " src="./img/freelan.jpg" alt="NikolayOstapovPhoto">
+              </div>
 
-            <span
-              class="flex justify-center items-center absolute w-[54px] h-[54px] bg-[#F5F5F5] hover:bg-[var(--green-2)] rounded-full right-0 bottom-28">
-              <img src="./img/icon/arrow-right.svg" alt="стрелкаВправо">
-            </span>
-          </div>
+              <div class="space-y-[5px]">
+                <p class="font-medium text-[16px] leading-[100%] text-[#00c470] min-[320px]:text-[14px]">Фрилансер</p>
 
-          <div class="flex justify-center items-center gap-[10px]">
-            <div
-              class="w-[60px] h-[60px] bg-gray-300 rounded-full overflow-hidden min-[600px]:w-[80px] min-[600px]:h-[80px]">
-              <img src="./img/freelan.jpg" alt="Николай Остапов" class="w-full h-full object-cover">
-            </div>
-
-            <div class="text-left">
-              <p class="font-medium text-[14px] text-[var(--green-1)] min-[600px]:text-[16px]">
-                Фрилансер
-              </p>
-
-              <p class="font-medium text-[14px] text-[#808080] min-[600px]:text-[16px] ">Николай Остапов</p>
+                <p class="font-medium text-[16px] leading-[100%] min-[320px]:text-[14px]">Николай Остапов</p>
+              </div>
             </div>
           </div>
+
+          <div>
+            <p class="font-medium text-[18px] leading-[200%] tracking-normal text-center pb-[30px]
+                        min-[600px]:text-[16px]
+                        min-[320px]:text-[14px]"> Это потрясающее приложение
+              которое помогло мне завершить все мои дела, и сделать дипломный проект раньше
+              срока. </p>
+            <div class="flex items-center justify-center">
+              <div class="w-[80px] h-[80px] mr-[20px]">
+                <img class="w-full h-full " src="./img/freelan.jpg" alt="NikolayOstapovPhoto">
+              </div>
+
+              <div class="space-y-[5px]">
+                <p class="font-medium text-[16px] leading-[100%] text-[#00c470] min-[320px]:text-[14px]">Фрилансер</p>
+
+                <p class="font-medium text-[16px] leading-[100%] min-[320px]:text-[14px]">Николай Остапов</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p class="font-medium text-[18px] leading-[200%] tracking-normal text-center pb-[30px]
+                        min-[600px]:text-[16px]
+                        min-[320px]:text-[14px]"> Это потрясающее приложение
+              которое помогло мне завершить все мои дела, и сделать дипломный проект раньше
+              срока. </p>
+            <div class="flex items-center justify-center">
+              <div class="w-[80px] h-[80px] mr-[20px]">
+                <img class="w-full h-full " src="./img/freelan.jpg" alt="NikolayOstapovPhoto">
+              </div>
+
+              <div class="space-y-[5px]">
+                <p class="font-medium text-[16px] leading-[100%] text-[#00c470] min-[320px]:text-[14px]">Фрилансер</p>
+
+                <p class="font-medium text-[16px] leading-[100%] min-[320px]:text-[14px]">Николай Остапов</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
         </div>
 
-        <div class="flex justify-center items-center gap-[10px]">
-          <span data-active
-            class="w-[14px] h-[14px] bg-[#E1E1E1] rounded-full cursor-pointer data-active:bg-[var(--green-2)]"></span>
-
-          <span
-            class="w-[14px] h-[14px] bg-[#E1E1E1] rounded-full cursor-pointer data-active:bg-[var(--green-2)]"></span>
-        </div>
       </div>
+
 
     </div>
   </section>
@@ -534,6 +630,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss-browser/4.1.13/index.global.min.js"
     integrity="sha512-TscjjxDy2iXx5s55Ar78c01JDHUug0K5aw4YKId9Yuocjx3ueX/X9PFyH5XNRVWqagx3TtcQWQVBaHAIPFjiFA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- owl-carousel -->
+  <script src="./libs/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+
+  <!-- js-main-script -->
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

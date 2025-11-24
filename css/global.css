@@ -1,0 +1,112 @@
+/* =========================
+   OWL NAV BUTTONS
+========================= */
+.owl-nav .owl-next,
+.owl-nav .owl-prev {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 100% !important;
+    background: #F5F5F5 !important;
+    position: absolute;
+}
+
+.owl-nav .owl-prev {
+    top: 50%;
+    left: 0;
+    transform: translate(-150%, -50%);
+}
+
+.owl-nav .owl-next {
+    top: 50%;
+    right: 0;
+    transform: translate(150%, -50%);
+}
+
+.owl-nav .owl-next:active,
+.owl-nav .owl-prev:active {
+    background-color: #00c470 !important;
+}
+
+/* =========================
+   OWL DOTS
+========================= */
+.owl-dot span {
+    display: block;
+    margin-top: 40px !important;
+    width: 14px !important;
+    height: 14px !important;
+    background: #E1E1E1 !important;
+    border-radius: 50%;
+}
+
+.owl-dot.active span {
+    background-color: #00c470 !important;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.overlay {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s linear;
+    z-index: 2;
+}
+
+.overlay.show {
+    top: 0;
+    bottom: 0;
+}
+
+/* =========================
+   SEARCH INPUT
+========================= */
+.search-input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    outline: none;
+    text-align: center;
+    border-radius: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.clear-search-input {
+    width: 360px;
+    height: 61px;
+    left: -300px;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 900px) {
+    .clear-search-input {
+        width: 300px;
+        left: -240px;
+    }
+}
+
+@media (max-width: 600px) {
+    .clear-search-input {
+        width: 200px;
+        left: -140px;
+    }
+}
+
+@media (max-width: 320px) {
+    .clear-search-input {
+        width: 180px;
+        left: -120px;
+    }
+}
